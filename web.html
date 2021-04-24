@@ -1,0 +1,384 @@
+<html>
+<head>
+	<style>
+		#inicio{
+			width: 100%;
+			height: 100%;
+			float: left;
+			background-color: #68EA3A;
+		}
+		#inicio button{
+			float: left;
+			width: 30%;
+			height: 10%;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+		#logo{
+			width: 100%;
+			height: 15%;
+			float: right;
+			text-align: center;
+		}
+		.imgInicio{
+			width: 45%;
+			height: 85%;
+			clear: right;
+		}
+		.pantallas{
+			width: 100%;
+			height: 100%;
+			float: left;
+			clear: left;
+			display: none;
+		}
+		.cabecera{
+			width: 100%;
+			height: 10%;
+			background-color: #68EA3A;
+			float: left;
+		}
+		.cuerpo{
+			width: 100%;
+			height: 75%;
+			float: left;
+			clear: left;
+		}
+		.pie{
+			width: 100%;
+			height: 15%;
+			background-color: #68EA3A;
+			float: left;
+			clear: left;
+		}
+		#mapa{
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
+		#mapa iframe{
+			width: 70%;
+			height: 100%;
+			float: left;
+		}
+		#menuMapa{
+			width: 30%;
+			height: 100%;
+			float: left;
+		}
+		#menuMapa div{
+			width: 50%;
+			height: 25%;
+			float: right;
+			clear: right;
+			margin-right: 10%;
+		}
+		#menuMapa div img{
+			width: 100%;
+			height: 90%;
+			border: 1px solid black;
+		}
+		.pie div{
+			width: 12%;
+			height: 100%;
+			float: left;
+			margin-left: 7%;
+		}
+		.pie div img{
+			width: 100%;
+			height: 100%;
+		}
+		.apartadosInfo2{
+			width: 90%;
+			height: 14%;
+			background-color: gray;
+			margin-top: 2px;
+			padding-left: 5%;
+			font-size: 1.5em;
+			float: left;
+			clear: left;
+		}
+		.apartadosInfo3{
+			width: 100%;
+			height: 14%;
+			font-size: 2em;
+			float: left;
+			clear: left;
+		}
+		.cabecera2{
+			width: 100%;
+			height: 30%;
+			float: left;
+		}
+		.cuerpo2{
+			width: 100%;
+			height: 55%;
+			float: left;
+			clear: left;
+		}
+		#privacidad button{
+			width: 100px;
+		}
+	</style>
+	<script>
+		function usuario(){
+			var usuario=prompt("Introduce tu usuario:");
+			var password=prompt("Introduce la clave:");
+			document.getElementById("privacidad").innerHTML="El presente Política de Privacidad establece los términos en que  usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.<br/>Información que es recogida<br/>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,  información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.<br/>Uso de la información recogida<br/>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios.  Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.<br/>está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.<br/><br/><input id='aceptar' type='checkbox'> He leido y acepto los t&eacute;rminos y pol&iacute;ticas de privacidad.<br/><button onclick='verificar()'>Entrar</button>";
+			for(i=0; i<16; i++){
+				document.getElementsByClassName("imgPie")[i].style="width: 15%; height: 100%; float: left; margin-left: 8%";
+			}
+			for(i=0; i<4; i++){
+				document.getElementsByClassName("imgProf")[i].style="display: none";
+			}
+		}
+		function usuarioProfesional(){
+			var usuario=prompt("Introduce tu usuario:");
+			var password=prompt("Introduce la clave:");
+			document.getElementById("privacidad").innerHTML="El presente Política de Privacidad establece los términos en que  usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.<br/>Información que es recogida<br/>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,  información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.<br/>Uso de la información recogida<br/>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios.  Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.<br/>está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.<br/><br/><input id='aceptar' type='checkbox'> He leido y acepto los t&eacute;rminos y pol&iacute;ticas de privacidad.<br/><button onclick='verificar()'>Entrar</button>";
+		}
+		function verificar(){
+			if(document.getElementById("aceptar").checked){
+				document.getElementById("inicio").style="display: none";
+				document.getElementById("info").style="display: block";
+			}else{
+				alert("Debes aceptar los términos de política y privacidad.");
+			}
+		}
+		function irInfo2(){
+			document.getElementById("info").style="display: none";
+			document.getElementById("info2").style="display: block";
+			document.getElementById("info3").style="display: none";
+			document.getElementById("info4").style="display: none";
+			document.getElementById("info5").style="display: none";
+		}
+		function irInfo3(){
+			document.getElementById("info").style="display: none";
+			document.getElementById("info2").style="display: none";
+			document.getElementById("info3").style="display: block";
+			document.getElementById("info4").style="display: none";
+			document.getElementById("info5").style="display: none";
+		}
+		function irInfo4(){
+			document.getElementById("info").style="display: none";
+			document.getElementById("info2").style="display: none";
+			document.getElementById("info3").style="display: none";
+			document.getElementById("info4").style="display: block";
+			document.getElementById("info5").style="display: none";
+		}
+		function irInfo(){
+			document.getElementById("info").style="display: block";
+			document.getElementById("info2").style="display: none";
+			document.getElementById("info3").style="display: none";
+			document.getElementById("info4").style="display: none";
+			document.getElementById("info5").style="display: none";
+		}
+	</script>
+</head>
+<body>
+	<div id="inicio">
+		<div id="logo">
+			<h1>
+				SOCIALPET
+			</h1>
+		</div>
+		<div class="imgInicio" style="float: left; background-image: url('usuNormal.jpg'); background-size: 100% 100%">
+			<button onclick="usuario()">
+				USUARIO
+			</button>
+		</div>
+		<div class="imgInicio" style="float: right; background-image: url('usuProfesional.jpg'); background-size: 100% 100%">
+			<button onclick="usuarioProfesional()">
+				USUARIO PROFESIONAL
+			</button>
+		</div>
+		<div id="privacidad" style="background-color: rgba(224, 227, 33, 0.9); position: absolute; float: left; margin-top: 15%; width: 90%; margin-left: 5%">
+		</div>
+	</div>
+	<div id="info" class="pantallas">
+		<div class="cabecera">
+			<b><span style="color: white"><h2> &nbsp;&nbsp;< Encontrar amigos</h2></span></b>
+		</div>
+		<div class="cuerpo">
+			<div id="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.309297447714!2d-3.3503905713078086!3d40.51265419239897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424bfad3ecbbc1%3A0x667509a1add2eac7!2sEscuela%20Polit%C3%A9cnica%20Superior%20-%20UAH!5e0!3m2!1ses!2ses!4v1618510726924!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy">
+				</iframe>
+				<div id="menuMapa">
+					<div onclick="">
+						<img src="ubicacion.png">
+					</div>
+					<div onclick="">
+						<img src="mas.png">
+					</div>
+					<div onclick="">
+						<img src="perro.png">
+					</div>
+					<div onclick="">
+						<img src="arboles.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pie">
+			<div class="imgPie" onclick="irInfo2()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo3()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo4()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgProf" onclick="">
+				<img src="arboles.png">
+			</div>
+		</div>
+	</div>
+	<div id="info2" class="pantallas">
+		<div class="cabecera">
+			<b><span style="color: white; font-size: 2em"> &nbsp;&nbsp;< Ajustes</span></b>
+		</div>
+		<div class="cuerpo">
+			<div class="apartadosInfo2">
+				Datos principales >
+			</div>
+			<div class="apartadosInfo2">
+				Peso y altura >
+			</div>
+			<div class="apartadosInfo2">
+				Vacunas >
+			</div>
+			<div class="apartadosInfo2">
+				Visitas veterinario >
+			</div>
+			<div class="apartadosInfo2">
+				Comidas >
+			</div>
+			<div class="apartadosInfo2">
+				Alergias >
+				<br/>
+				Gestionar suscripci&oacute;n
+			</div>
+			<span style="font-size: 1.5em; float: left; clear: left; margin-top: 15px; margin-left: 10%">
+				<input type="checkbox"> Compartir ubicaci&oacute;n
+				&nbsp;&nbsp;
+				<input type="checkbox"> Recibir notificaciones
+			</span>
+		</div>
+		<div class="pie">
+			<div class="imgPie" onclick="irInfo2()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo3()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo4()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgProf" onclick="">
+				<img src="arboles.png">
+			</div>
+		</div>
+	</div>
+	<div id="info3" class="pantallas">
+		<div class="cabecera2">
+			<span style="float: left; margin-left: 5%">< Uli</span>
+			<span style="float: left; margin-left: 30%"><img src="arboles.png" width="100px" height="100px" style="border-radius: 50%; border: 2px solid black"></span>
+		</div>
+		<div class="cuerpo2">
+			<div class="apartadosInfo3" style="background-color: #68EA3A">
+					<span style="float: left; margin-left: 20%; color: white; font-weight: bold">Cambiar avatar</span> <span style="float: right; margin-right: 20%; color: white; font-weight: bold">></span>
+			</div>
+			<div class="apartadosInfo3">
+				<span style="float: left; margin-left: 20%; color: #68EA3A">Nombre:</span><span style="float: right; margin-right: 20%">Uli</span>
+			</div>
+			<div class="apartadosInfo3">
+				<span style="float: left; margin-left: 20%; color: #68EA3A">Raza:</span><span style="float: right; margin-right: 20%">Braco Alem&aacute;n</span>
+			</div>
+			<div class="apartadosInfo3">
+				<span style="float: left; margin-left: 20%; color: #68EA3A">Fecha de nacimiento:</span><span style="float: right; margin-right: 20%">2020 - 05 - 20</span>
+			</div>
+			<div class="apartadosInfo3">
+				<span style="float: left; margin-left: 20%; color: #68EA3A">Color:</span><span style="float: right; margin-right: 20%">blanco y negro</span>
+			</div>
+			<div class="apartadosInfo3">
+				<span style="float: left; margin-left: 20%; color: #68EA3A">Due&ntilde;o:</span><span style="float: right; margin-right: 20%">Javier</span>
+			</div>
+			<div class="apartadosInfo3">
+				<span style="float: left; margin-left: 20%; color: #68EA3A">Tel&eacute;fono:</span><span style="float: right; margin-right: 20%">+34 687 654 321</span>
+			</div>
+		</div>
+		<div class="pie">
+			<div class="imgPie" onclick="irInfo2()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo3()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo4()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgProf" onclick="">
+				<img src="arboles.png">
+			</div>
+		</div>
+	</div>
+	<div id="info4" class="pantallas">
+		<div class="cabecera2">
+			<span style="float: left; margin-left: 5%"><img src="arboles.png" width="100px" height="100px" style="border-radius: 50%; border: 2px solid black"></span><span style="float: left; margin-left: 5%"><h1>Uli</h1>Me llevo bien con todos los perros, soy un amigable braco alem&aacute;n y mis due&ntilde;os me quieren mucho.<br/><br/>Guadalajara, Espa&ntilde;a</span>
+		</div>
+		<div class="cuerpo2">
+			<div style="width: 100%; height: 20%; background-color: gray; float: left">
+				<img src="arboles.png" width="15%" height="70%" style="float: left; margin-left: 15%; margin-top: 5px">
+				<img src="arboles.png" width="15%" height="70%" style="float: right; margin-right: 15%; margin-top: 5px">
+			</div>
+			<div style="width: 100%; height: 80%; float: left; clear: left">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+				<img src="arboles.png" width="10%" height="50%">
+			</div>
+		</div>
+		<div class="pie">
+			<div class="imgPie" onclick="irInfo2()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo3()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo4()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" onclick="irInfo()">
+				<img src="arboles.png">
+			</div>
+			<div class="imgPie" class="imgProf" onclick="">
+				<img src="arboles.png">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
